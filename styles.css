@@ -1,0 +1,152 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-size: 13px;
+    background-color: rgba(237, 242, 248, 155);
+    margin: 0;
+}
+
+
+.container {
+    
+}
+
+
+.card {
+    border-radius: 10px;
+    box-shadow: 10px 0px 50px 0px rgba(0, 0, 0, 0.15);
+    margin: 20px;
+    padding: 30px;
+
+}
+
+
+.top-left {
+    background-color: rgba(115, 63, 200, 255);
+    background-image: url('images/bg-pattern-quotation.svg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 80% 0px;
+}
+
+.top-mid {
+    background-color: #49556b;
+}
+
+.top-right {
+    background-color: #ffffff;
+}
+
+.bot-left {
+    background-color: #ffffff;
+}
+
+.bot-mid {
+    background-color: #18202d;
+}
+
+
+/* Profiles */
+
+.white {
+    color: #fff;
+}
+
+.dark {
+    color: #494c52;
+}
+
+.dark2 {
+    color: #3a3e49;
+}
+
+.low-op {
+    opacity: 0.5;
+}
+
+.top-profile {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    line-height: 20px;
+}
+
+.top-profile img {
+    border-radius: 50px;
+    width: 40px;
+}
+
+.img-border {
+    border: 2px solid rgba(168, 115, 173, 255);
+}
+
+.name {
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.verify {
+    opacity: 0.5;
+}
+
+
+.desc {
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 15px 0 30px 0;
+    line-height: 30px;
+    opacity: .9;
+}
+
+.quote {
+    opacity: .7;
+    line-height: 23px;
+    font-size: 0.85rem;
+}
+
+@media (min-width: 760px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        max-width: 70%;
+        max-height: 70%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .card {
+        margin: 0px;
+    }
+
+    .card:last-child {
+        grid-column: 4;
+        grid-row: 1 / span 2;
+    }
+
+    .col-span-2 {
+        grid-column: span 2;
+    }
+}
