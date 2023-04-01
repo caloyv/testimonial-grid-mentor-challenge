@@ -23,6 +23,8 @@ body {
     font-size: 13px;
     background-color: rgba(237, 242, 248, 155);
     margin: 0;
+
+
 }
 
 
@@ -124,17 +126,86 @@ body {
     font-size: 0.85rem;
 }
 
-@media (min-width: 760px) {
+@media (min-width: 760px){
+
+    body{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .container {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        gap: 30px;
-        min-width: 70%;
-        min-height: 70%;
-        position: absolute;
+        grid-template-rows: 1fr 0.5fr .8fr;
+        gap: 10px;
+        width: 90%;
+        max-width: 1260px;
+        margin: 30px 0;
+        /* min-height: 70%; */
+        /* position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%); */
+        /* justify-content: center;
+        align-items: center; */
+        
+    }
+
+    .card {
+        margin: 0px;
+    }
+
+    .col-span-2 {
+        grid-column: 1 / span 2;
+    }
+
+    .card:last-child{
+        grid-column: span 4;
+        grid-row: 3;
+    }
+    
+    .card:nth-child(2){
+        grid-column: span 2;
+    }
+
+    .card:nth-child(3){
+        grid-column: span 2;
+    }
+
+    .card:nth-child(4){
+        grid-column: 3 / span 2;
+        grid-row: 1;
+    }
+
+}
+
+@media (min-width: 1260px) {
+
+    body{
+        width: 100vw;
+        width: 100dvw;
+        height: 100vh;
+        height: 100dvh;
+        
+    }
+    .container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr 1fr;
+        gap: 30px;
+        max-width: 1260px;
+        height: 72%;
+        /* min-height: 70%; */
+        /* position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); */
+        /* justify-content: center;
+        align-items: center; */
+        
     }
 
     .card {
@@ -148,5 +219,18 @@ body {
 
     .col-span-2 {
         grid-column: span 2;
+    }
+    
+    .card:nth-child(2){
+        grid-column: unset;
+    }
+
+    .card:nth-child(3){
+        grid-column: unset;
+    }
+
+    .card:nth-child(4){
+        grid-column: 2 / span 2;
+        grid-row: 2;
     }
 }
