@@ -129,8 +129,8 @@ body {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 30px;
-        max-width: 70%;
-        max-height: 70%;
+        min-width: 70%;
+        min-height: 70%;
         position: absolute;
         top: 50%;
         left: 50%;
