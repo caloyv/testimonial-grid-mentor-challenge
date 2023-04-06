@@ -44,8 +44,8 @@ body {
     background-color: rgba(115, 63, 200, 255);
     background-image: url('images/bg-pattern-quotation.svg');
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: 80% 0px;
+    background-position: top right 20%;
+    background-size: 20%;
 }
 
 .top-mid {
